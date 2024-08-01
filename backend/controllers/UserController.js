@@ -50,4 +50,24 @@
     }
 
 
-    module.exports={getUser,postUser,deleteUser};
+    const deleteUsers=(req,res)=>{
+        console.log("first")
+        const id=req.query.id;
+        console.log(id);
+
+        try{
+
+
+                    res.status(203).send({
+                        messege:"deleteuser api calls"
+                    })
+                }
+        catch(err)
+        {
+            console.log(err);
+        }
+
+    }
+
+
+    module.exports={getUser,postUser,deleteUser,deleteUsers};
